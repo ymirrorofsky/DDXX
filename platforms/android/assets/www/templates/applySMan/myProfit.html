@@ -1,0 +1,24 @@
+<ion-view title="商家明细" hide-nav-bar="true" hide-back-button="true">
+	<ion-header-bar class="bar-assertive header-back">
+		<div class="buttons">
+			<button class="button iconfont icon-back1 button-clear" ui-sref="tab.my">返回</button>
+		</div>
+		<h1 class="title">商家明细</h1>
+	</ion-header-bar>
+	<ion-content>
+	
+			<div class="row">
+				<div class="col" ng-click="active(1)" ng-class="{'active': select == 1}">商家手机号</div>
+				<div class="col" ng-click="active(2)" ng-class="{'active': select == 2}">商家店铺名称</div>
+				<div class="col" ng-click="active(3)" ng-class="{'active': select == 3}">累计收益</div>
+			</div>			
+					
+			<div class="row">
+				<div class="col" ng-click="active(1)" ng-class="{'active': select == 1}">巧克力</div>
+				<div class="col" ng-click="active(2)" ng-class="{'active': select == 2}">联系人</div>
+				<div class="col" ng-click="active(3)" ng-class="{'active': select == 3}">回购</div>
+			</div>
+			
+	
+	</ion-content>
+</ion-view>

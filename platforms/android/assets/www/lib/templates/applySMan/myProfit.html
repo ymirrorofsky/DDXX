@@ -1,0 +1,26 @@
+<ion-view title="商家明细" hide-nav-bar="true" hide-back-button="true">
+	<ion-header-bar class="bar-assertive header-back">
+		<div class="buttons">
+			<button class="button iconfont icon-back1 button-clear" ui-sref="tab.my">返回</button>
+		</div>
+		<h1 class="title">商家明细</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="yd-loveInfo" ng-if="!orderEmpty">
+			<ul>
+				<li>
+			<span class="fl text-overflow_1">商家手机号</span><span class="fr text-overflow_1">消费日期:{{item.createtime*1000 | date:'yyyy-MM-dd'}}</span></p>
+					<p><span class="fl">消费金额:</span><span class="fr"><i class="iconfont icon-money positive"></i>{{item.orderPrice}}</span></p>
+					<!--<p><span class="fl">爱心结余:</span><span class="fr"><i class="iconfont icon-likefill positive"></i>{{item.surplusMoney}}</span></p>-->
+					<p><span class="fl">产生爱心:</span><span class="fr"><i class="iconfont icon-likefill positive"></i>{{item.addLoveNum}}</span></p>
+				</li>
+				<li ng-repeat="item in loveInfo.list ">
+					<p><span class="fl text-overflow_1">爱心产生日期:{{item.updatetime*1000 | date:'yyyy-MM-dd'}}</span><span class="fr text-overflow_1">消费日期:{{item.createtime*1000 | date:'yyyy-MM-dd'}}</span></p>
+					<p><span class="fl">消费金额:</span><span class="fr"><i class="iconfont icon-money positive"></i>{{item.orderPrice}}</span></p>
+					<!--<p><span class="fl">爱心结余:</span><span class="fr"><i class="iconfont icon-likefill positive"></i>{{item.surplusMoney}}</span></p>-->
+					<p><span class="fl">产生爱心:</span><span class="fr"><i class="iconfont icon-likefill positive"></i>{{item.addLoveNum}}</span></p>
+				</li>
+			</ul>
+		</div>
+	</ion-content>
+</ion-view>

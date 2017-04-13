@@ -1,0 +1,34 @@
+<ion-view view-title="成为市级代理" hide-nav-bar="true">
+	<div>
+		<ion-header-bar class="bar-assertive header-back">
+			<div class="buttons">
+				<button class="button iconfont icon-back1 button-clear" ng-click="$ionicGoBack()">返回</button>
+			</div>
+			<h1 class="title">成为市级代理</h1>
+		</ion-header-bar>
+		<ion-content class="bodybg-normal">
+			<div class="yd-apply-shop flex">
+				<img ng-src="{{userInfo.avatar}}" src="img/avatar.jpg">
+				<div class="flex_1 right">
+					<p>ID：<span>{{userInfo.uid}}</span></p>
+					<p>手机号码：{{userInfo.mobile}}</p>
+					<p>我的推荐ID:{{userInfo.relationUid || "无"}}</p>
+				</div>
+			</div>
+			<div class="yd-donate-count real-count s-apply-c">
+				<ul>
+					<li>
+						<label>省级推荐人</label>
+						<input type="text" placeholder="请输入推荐人账号" ng-model="applyPAgent.pAgent">
+					</li>
+				</ul>
+			</div>
+	</div>
+	</ion-content>
+	<ion-footer-bar>
+		<button class="button button-assertive" style="width: 100%;" ng-click="checkPAgent()">提交</button>
+	</ion-footer-bar>
+	</div>
+
+	<!--商家描述-->
+</ion-view>

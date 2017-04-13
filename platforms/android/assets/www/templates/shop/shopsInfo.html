@@ -1,0 +1,33 @@
+<ion-view title="商家详情" hide-nav-bar="true" hide-back-button="true">
+
+	<ion-header-bar class="bar-assertive header-back">
+		<div class="buttons">
+			<button class="button iconfont icon-back1 button-clear" ng-click="$ionicGoBack()">返回</button>
+		</div>
+		<h1 class="title">商家详情</h1>
+	</ion-header-bar>
+
+	<ion-content>
+		<ion-slide-box delegate-handle="slideimgs" does-continue="true" show-pager="false">
+			<!--<ion-slide ng-repeat="img in shopsdetail.slide track by $index">
+				<img ng-src="{{img}}" width="100%" class="banner-img">
+			</ion-slide>-->
+			<ion-slide>
+				<img ng-src="{{shopsdetail.slide}}" width="100%" class="banner-img">
+			</ion-slide>
+		</ion-slide-box>
+		<div class="shops-detai-header" ng-if="!shopsdetail.slide">
+			<img src="img/wuimg.png" style='max-height:220px'>
+		</div>
+		<div class="shops-detai-middle">
+			<div class="tit flex">
+				<h3 class="flex_1 text-overflow_1" ng-bind="shopsdetail.title"></h3><span ng-click="praise()"><i class="iconfont icon-dianzan1"></i></br>赞{{shopsdetail.followNum}}</span></div>
+			<div class="address common" ng-disabled='!shopsdetail.locationUrl' ng-click="showAddress(shopsdetail.locationUrl)"><a class="flex" ng-href=""><i class="ion-android-pin calm"></i><p class="text-overflow_2 flex_1" ng-bind="shopsdetail.birthInfo || '暂无'"></p></a></div>
+			<div class="common"><a class="flex" href="tel:{{shopsdetail.tel}}"><i class="icon ion-ios-telephone calm"></i>{{shopsdetail.tel || '暂无'}}</a></div>
+			<div class="bodybg-normal" style="height: 10px;"></div>
+			<div class="shop-descr common flex"><i class="ion-android-bookmark assertive"></i>
+				<p class="text-overflow_2 flex_1" ng-bind="shopsdetail.description"></p>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

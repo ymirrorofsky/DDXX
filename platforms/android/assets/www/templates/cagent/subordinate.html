@@ -1,0 +1,18 @@
+<ion-view view-title="我的业务员" hide-nav-bar="true" hide-back-button="true">
+	<ion-header-bar class="bar-assertive header-back">
+		<div class="buttons">
+			<button class="button iconfont icon-back1 button-clear" ng-click='$ionicGoBack()'>返回</button>
+		</div>
+		<h1 class="title">我的业务员</h1>
+	</ion-header-bar>
+	<ion-content>
+		<div class="yd-shops-ranking">
+			<ul>
+				<li class="flex" ng-repeat="item in subordinates">
+					<i ng-bind="$index+1" ng-class="first"></i>
+					<p class="text-overflow_1 flex_1" ng-bind="item.name"></p>
+				</li>  
+			</ul>
+		</div>
+	</ion-content>
+</ion-view>

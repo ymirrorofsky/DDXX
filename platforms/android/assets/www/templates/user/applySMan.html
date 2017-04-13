@@ -1,0 +1,33 @@
+<ion-view view-title="申请成为业务员" hide-nav-bar="true">
+	<div>
+		<ion-header-bar class="bar-assertive header-back">
+			<div class="buttons">
+				<button class="button iconfont icon-back1 button-clear" ng-click="$ionicGoBack()">返回</button>
+			</div>
+			<h1 class="title">申请成为业务员</h1>
+		</ion-header-bar>
+		<ion-content class="bodybg-normal">
+			<div class="yd-apply-shop flex">
+				<img ng-src="{{userInfo.avatar}}" src="img/avatar.jpg">
+				<div class="flex_1 right">
+					<p>ID：<span>{{userInfo.uid}}</span></p>
+					<p>手机号码：{{userInfo.mobile}}</p>
+					<p>我的推荐ID:{{userInfo.relationUid || "无"}}</p>
+				</div>
+			</div>
+			<div class="yd-donate-count real-count s-apply-c">
+				<ul>
+					<li>
+						<label>市级代理账号</label>
+						<input style="padding-left: 95px;" type="text" placeholder="请输入市级代理账号" ng-model="applyCAgent.cAgent">
+					</li>
+				</ul>
+			</div>
+
+		</ion-content>
+		<ion-footer-bar>
+			<button class="button button-assertive" style="width: 100%;" ng-click="checkCAgent()">申请</button>
+		</ion-footer-bar>
+	</div>
+
+</ion-view>
